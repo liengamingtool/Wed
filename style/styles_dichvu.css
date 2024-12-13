@@ -1,0 +1,253 @@
+/* styles.css */
+
+/* Cài đặt chung */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Thanh điều hướng */
+.nav-container {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1000; /* Đảm bảo thanh nav nằm trên cùng */
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none; /* Ẩn nút menu trên màn hình lớn */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Khoảng cách giữa các liên kết */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#darkModeToggle {
+    background: #4CAF50; /* Màu nền cho nút chế độ tối/sáng */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#darkModeToggle:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Container các dịch vụ */
+.container {
+    position: relative;
+    z-index: 1; /* Đảm bảo thẻ dịch vụ nằm dưới thanh điều hướng */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Khoảng cách giữa các khung dịch vụ */
+    padding: 20px;
+    margin-top: 60px; /* Khoảng cách từ trên xuống để tránh bị che khuất bởi menu */
+}
+
+/* Thẻ dịch vụ */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #333;
+    position: relative; /* Để nhãn HOT có thể được đặt đúng vị trí */
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.service-card h2 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info .reputation {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.service-image {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Nhãn HOT */
+.hot-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f06292; /* Nền đỏ hồng đậm */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Chế độ tối */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .nav-container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-links a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-card {
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-card h2 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .service-card p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .info .reputation {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode .btn {
+    background-color: #4CAF50;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%; /* Đẩy menu xuống ngay dưới thanh điều hướng */
+        left: 0;
+        background-color: #333;
+        gap: 0; /* Loại bỏ khoảng cách trong menu */
+        z-index: 999; /* Đảm bảo menu nằm trên các phần tử khác */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        gap: 0; /* Loại bỏ khoảng cách trong menu */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .service-card {
+        width: calc(100% - 40px); /* Để có khoảng cách trái và phải */
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nạp Thẻ</title>
+    <link rel="stylesheet" href="./style/styles_napthe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+</head>
+<body>
+    <script src="index.js"></script>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">CODERE</div>
+            <button class="navbar-toggler" id="navbar-toggler">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-nav" id="navbar-nav">
+                <li><a href="./index.html">Trang Chủ</a></li>
+                <li><a href="#">Dịch Vụ</a></li>
+                <li><a href="./contact.html">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <!-- Thêm vào phần thanh điều hướng -->
+<h1 class="blinking">Chào mừng bạn đến với trang Nạp Thẻ!</h1>
+            <h1>Nạp Thẻ</h1>
+            <form id="napTheForm" onsubmit="return handleSubmit()">
+                <div class="form-group">
+                    <label for="cardID">ID Thẻ:</label>
+                    <input type="text" id="cardID" name="cardID" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardSerial">Seri Thẻ:</label>
+                    <input type="text" id="cardSerial" name="cardSerial" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardType">Loại Thẻ:</label>
+                    <select id="cardType" name="cardType" required>
+                        <option value="">Chọn loại thẻ</option>
+                        <option value="Viettel">Viettel</option>
+                        <option value="Vinaphone">Vinaphone</option>
+                        <option value="Mobifone">Mobifone</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cardValue">Giá trị Thẻ:</label>
+                    <select id="cardValue" name="cardValue" required>
+                        <option value="">Chọn mệnh giá</option>
+                        <option value="20000">20.000 VND</option>
+                        <option value="50000">50.000 VND</option>
+                        <option value="100000">100.000 VND</option>
+                        <option value="200000">200.000 VND</option>
+                        <option value="500000">500.000 VND</option>
+                    </select>
+                </div>
+                <button type="submit">Nạp Thẻ</button>
+            </form>
+            <div id="result" class="result hidden"></div>
+            <div id="balance" class="balance">
+                <p>Số dư hiện tại: <span id="balanceValue">0</span> (VND)</p>
+            </div>
+            <div id="history" class="history">
+                <h2>Lịch sử Nạp Thẻ</h2>
+                <div class="table-responsive">
+                    <table id="historyTable">
+                        <thead>
+                            <tr>
+                                <th>Ngày</th>
+                                <th>ID Thẻ</th>
+                                <th>Seri Thẻ</th>
+                                <th>Loại Thẻ</th>
+                                <th>Giá trị Thẻ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyList">
+                            <!-- Lịch sử sẽ được thêm vào đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>© 2024 Trang Nạp Thẻ. Mọi quyền được bảo lưu.</p>
+    </footer>
+    <div id="successAlert" class="alert hidden">
+        <i class="fas fa-check-circle"></i>
+        <p>Bạn đã nạp thẻ thành công!</p>
+        <button class="close-btn" onclick="closeAlert()">×</button>
+    </div>
+    <script src="napthe.js"></script>
+    <!-- Thêm vào cuối trang -->
+<script>
+    function toggleDarkMode() {
+        const body = document.body;
+        body.classList.toggle('dark-mode');
+        
+        // Lưu lựa chọn của người dùng vào localStorage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Áp dụng chế độ tối nếu người dùng đã chọn trước đó
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+    });
+</script>
+
+</body>
+</html>

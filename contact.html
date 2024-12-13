@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ Chăm Sóc Khách Hàng</title>
+    <link rel="stylesheet" href="./style/styles_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+</head>
+<body>
+    <script src="index.js"></script>
+    <script src="livechat.js"></script>
+    <header>
+        <div class="container">
+            <h1>Liên Hệ Chăm Sóc Khách Hàng</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+    <main>
+        <section class="contact-info">
+            <div class="container">
+                <h2>Chúng tôi luôn sẵn sàng hỗ trợ bạn!</h2>
+                <p>Chúng tôi cam kết mang đến cho bạn sự hỗ trợ nhanh chóng và tận tình nhất. Bạn có thể liên hệ với chúng tôi qua các phương thức dưới đây:</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="icon">
+                            <img src="./image/gmail.png" alt="Email Icon">
+                        </div>
+                        <h3>Gửi Email</h3>
+                        <p>Đội ngũ hỗ trợ của chúng tôi sẽ phản hồi bạn trong vòng 24 giờ.</p>
+                        <a href="mailto:adctytnhhinetviet@gmail.com" class="contact-link">Gửi Email</a>
+                    </div>
+                    <div class="contact-method">
+                        <div class="icon">
+                            <img src="./image/telegram.png" alt="Telegram Icon">
+                        </div>
+                        <h3>Nhắn Tin Telegram</h3>
+                        <p>Nhắn tin cho chúng tôi qua Telegram để nhận được phản hồi nhanh chóng và chính xác.</p>
+                        <a href="https://t.me/dichvucodegiare" target="_blank" class="contact-link">Liên Hệ Telegram</a>
+                    </div>
+                    <div class="contact-method">
+                        <!-- <div class="badge hot">HOT</div> -->
+                        <div class="icon">
+                            <img src="./image/livechat.png" alt="Telegram Icon">
+                            <!-- <div class="badge hot">HOT</div> -->
+                        </div>
+                        <h3>Nhắn tin LiveChat</h3>
+                        <p>Nhắn tin cho chúng tôi qua Livechat sẽ trả lời nhanh chóng và chính xác.</p>
+                        <a href="./livechat.html" target="_blank" class="contact-link">LIVE CHAT</a>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+        <section class="about-us">
+            <div class="container">
+                <h2>Về Chúng Tôi</h2>
+                <p>Chúng tôi là đội ngũ chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực chăm sóc khách hàng. Đội ngũ của chúng tôi cam kết cung cấp dịch vụ chất lượng và hỗ trợ tận tình để đảm bảo sự hài lòng của bạn.</p>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="./image/Facebook.png" alt="Team Member 1">
+                        <h3>Facebook</h3>
+                        <p>Chuyên gia chăm sóc khách hàng với hơn 10 năm kinh nghiệm trong ngành.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="./image/Zalo.png" alt="Team Member 2">
+                        <h3>Zalo</h3>
+                        <p>Chuyên viên hỗ trợ khách hàng, luôn sẵn sàng giúp đỡ bạn giải quyết vấn đề.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <h2>Câu Hỏi Thường Gặp</h2>
+                <div class="faq-item">
+                    <h3>1. Làm thế nào để tôi có thể liên hệ với các bộ phận khác nhau?</h3>
+                    <p>Bạn có thể liên hệ qua email hoặc Telegram. Chi tiết liên hệ được cung cấp trong phần "Gửi Email" và "Nhắn Tin Telegram".</p>
+                </div>
+                <div class="faq-item">
+                    <h3>2. Thời gian phản hồi là bao lâu?</h3>
+                    <p>Chúng tôi cam kết phản hồi tất cả các yêu cầu trong vòng 24 giờ.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>3. Tôi có thể yêu cầu hỗ trợ vào cuối tuần không?</h3>
+                    <p>Có, chúng tôi hỗ trợ bạn suốt 7 ngày trong tuần.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Công Ty codere. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>

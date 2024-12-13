@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Người Dùng</title>
+    <link rel="stylesheet" href="./style/styles_user.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+</head>
+<body>
+    <script src="index.js"></script>
+    <script src="xemsodu.js"></script>
+    <header>
+        <div class="container">
+            <h1>Thông Tin Người Dùng</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+    <main>
+        <section class="user-info">
+            <div class="container">
+                <div class="avatar">
+                    <img src="./image/user.png" alt="Avatar">
+                </div>
+                <div class="info">
+                    <h2 id="welcomeMessage"></h2>
+                    <p><strong>Địa chỉ IP:</strong> <span id="ip">Đang tải...</span></p>
+                    <p><strong>Trình duyệt:</strong> <span id="browser">Đang tải...</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trang Thông Tin Người Dùng. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script>
+        // Hàm để lấy địa chỉ IP và trình duyệt của người dùng
+        async function getUserInfo() {
+            try {
+                // Lấy IP từ API
+                const ipResponse = await fetch('https://api.ipify.org?format=json');
+                const ipData = await ipResponse.json();
+                document.getElementById('ip').textContent = ipData.ip;
+
+                // Lấy thông tin trình duyệt
+                const browser = navigator.userAgent;
+                document.getElementById('browser').textContent = browser;
+            } catch (error) {
+                console.error('Lỗi khi lấy thông tin:', error);
+                document.getElementById('ip').textContent = 'Không thể lấy thông tin';
+                document.getElementById('browser').textContent = 'Không thể lấy thông tin';
+            }
+        }
+
+        // Gọi hàm khi trang được tải
+        window.onload = getUserInfo;
+    </script>
+</body>
+</html>

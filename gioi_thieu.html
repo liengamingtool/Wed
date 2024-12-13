@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu sản phẩm</title>
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+    <link rel="stylesheet" href="./style/styles_gioithieu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <script src="index.js"></script>
+    <header>
+        <div class="container">
+            <h1>Cửa Hàng Bán Key Tốt Nhất</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+    <main>
+        <br>
+        <div class="notification-box">
+            <div class="notification-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                    <path d="M12 22c1.1 0 2-.9 2-2H10c0 1.1.9 2 2 2zm1-4H11v-6h2v6zm0-8h-2V7h2v3z"/>
+                </svg>
+            </div>
+            <div class="notification-content">
+                <strong>CAM KẾT HOÀN TIỀN 100%</strong>. NẾU SỬ DỤNG KEY VIP HACK KHÔNG ĐƯỢC MẬT KHẨU FACEBOOK.
+            </div>
+        </div>
+        <section class="hero">
+            
+            <div class="container">
+                <h2>Chào mừng đến với cửa hàng của chúng tôi</h2>
+                <p>Chúng tôi cung cấp các sản phẩm chất lượng cao và dịch vụ tuyệt vời.</p>
+                <a href="./index.html" class="btn">Khám Phá Ngay</a>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <h2>Sản Phẩm Nổi Bật</h2>
+                <div class="product-grid">
+                    <div class="product">
+                        <img src="./image/Facebook.png" alt="Key Facebook">
+                        <h3>Key Facebook</h3>
+                        <p>Cung cấp key Facebook chất lượng và giá cả phải chăng.</p>
+                        <a href="./gia_key.html" class="btn-buy">Mua Ngay</a>
+                    </div>
+                    <div class="product">
+                        <img src="./image/Zalo.png" alt="Key Zalo">
+                        <h3>Key Zalo</h3>
+                        <p>Cung cấp key Zalo uy tín, đảm bảo bảo mật và chất lượng.</p>
+                        <a href="./gia_key.html" class="btn-buy">Mua Ngay</a>
+                    </div>
+                    <div class="product">
+                        <img src="./image/uy_tin.png" alt="Cam Kết Độ Uy Tín">
+                        <h3>Cam Kết Độ Uy Tín</h3>
+                        <p>Chúng tôi cam kết độ uy tín và chất lượng cho mọi sản phẩm.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cửa Hàng Bán Key codere. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+</body>
+</html>

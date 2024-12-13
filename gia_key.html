@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giá key</title>
+    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+</head>
+
+<body>
+    <script src="index.js"></script>
+    <header>
+        <div class="container1">
+            <h1>Thông Tin Key</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+    <div class="container">
+        <h1>BẢNG GIÁ KEY</h1>
+        <div class="note">
+            <p>#KEY BASIC chỉ có thể hack được tài khoản bảo mật thấp hoặc không có bảo mật.</p>
+            <br>
+            <hr size="5px" align="center">
+            <br>
+            <p>#Khuyến nghị nên dùng KEY VIP, DIAMOND hoặc PREMIUM để chắc chắn thành công 100%, lấy được mật khẩu tài
+                khoản Facebook, Zalo...</p>
+        </div>
+        <div class="pricing-table">
+            <div class="card basic">
+                <h2>KEY BASIC</h2>
+                <p class="price">350,000 VNĐ / 1 LƯỢT SỬ DỤNG</p>
+                <button id="notifyButton">MUA NGAY</button>
+                <div id="notification" class="notification"></div>
+                <script src="scripts_key.js"></script>
+                <ul>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Bảo hành
+                    </li>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ LiveChat
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ sử dụng
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Có thể sử dụng tất cả dịch vụ
+                    </li>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Phá bảo mật cao
+                    </li>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Chức năng bình luận
+                    </li>
+                </ul>
+            </div>
+            <div class="card vip">
+                <h2>KEY VIP</h2>
+                <p class="price">1,100,000 VNĐ / 10 LƯỢT SỬ DỤNG</p>
+                <button id="notifyButton1">MUA NGAY</button>
+                <div id="notification1" class="notification"></div>
+                <script src="scripts_key.js"></script>
+                <ul>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Bảo hành
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ LiveChat
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ sử dụng
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Có thể sử dụng tất cả dịch vụ
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Phá bảo mật cao
+                    </li>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Chức năng bình luận
+                    </li>
+                </ul>
+            </div>
+            <div class="card diamond">
+                <h2>KEY DIAMOND</h2>
+                <p class="price">2,000,000 VNĐ / 20 LƯỢT SỬ DỤNG</p>
+                <button id="notifyButton2">MUA NGAY</button>
+                <div id="notification2" class="notification"></div>
+                <script src="scripts_key.js"></script>
+                <ul>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Bảo hành
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ LiveChat
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ sử dụng
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Có thể sử dụng tất cả dịch vụ
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Phá bảo mật cao
+                    </li>
+                    <li class="no">
+                        <svg width="16" height="16" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1a7 7 0 110 14A7 7 0 018 1zm3.54 3.54a.75.75 0 00-1.06 0L8 7.94 5.53 5.47a.75.75 0 00-1.06 1.06L6.94 9l-2.47 2.47a.75.75 0 001.06 1.06L8 10.06l2.47 2.47a.75.75 0 001.06-1.06L9.06 9l2.47-2.47a.75.75 0 000-1.06z" />
+                        </svg>
+                        Chức năng bình luận
+                    </li>
+                </ul>
+            </div>
+            <div class="card premium">
+                <h2>KEY PREMIUM</h2>
+                <p class="price">5,000,000 VNĐ / 50 LƯỢT SỬ DỤNG</p>
+                <button id="notifyButton3">MUA NGAY</button>
+                <div id="notification3" class="notification"></div>
+                <script src="scripts_key.js"></script>
+                <ul>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Bảo hành
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ LiveChat
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Hỗ trợ sử dụng
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Có thể sử dụng tất cả dịch vụ
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Phá bảo mật cao
+                    </li>
+                    <li>
+                        <svg width="16" height="16" fill="green" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.78 4.72a.75.75 0 00-1.06 0L6.75 10.69 5.28 9.22a.75.75 0 00-1.06 1.06l2 2a.75.75 0 001.06 0l6-6a.75.75 0 000-1.06z" />
+                        </svg>
+                        Chức năng bình luận
+                    </li>
+                </ul>
+            </div>
+            <div class="key-check">
+                <h1>Kiểm Tra Mã Key</h1>
+                <form id="keyForm">
+                    <input type="text" id="keyInput" placeholder="Nhập mã key của bạn" required>
+                    <button type="submit">Kiểm Tra</button>
+                </form>
+                <div id="result" class="result"></div>
+            </div>
+        </div>
+        <script src="scripts.js"></script>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trang Key. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+    <script language="javascript">
+        var button = document.getElementById("btn");
+        button.onclick = function () {
+            alert("Bấm vào liên hệ để mua key");
+        }
+    </script>
+    <script language="javascript">
+        var button = document.getElementById("btn1");
+        button.onclick = function () {
+            alert("Bấm vào liên hệ để mua key");
+        }
+    </script>
+    <script language="javascript">
+        var button = document.getElementById("btn2");
+        button.onclick = function () {
+            alert("Bấm vào liên hệ để mua key");
+        }
+    </script>
+    <script language="javascript">
+        var button = document.getElementById("btn3");
+        button.onclick = function () {
+            alert("Bấm vào liên hệ để mua key");
+        }
+    </script>
+</body>
+
+</html>

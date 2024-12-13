@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm Tra Key Facebook</title>
+    <link rel="stylesheet" href="./style/facebook_zalo.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+    <link rel="stylesheet" href="./style/styles_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container1">
+            <font style="color: black;"><h1>Dịch vụ facebook</h1></font>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="form-group">
+            <label for="keyInput">Nhập Key:</label>
+            <input type="text" id="keyInput" placeholder="Nhập vào key...">
+        </div>
+        <div class="form-group">
+            <label for="idInput">Nhập ID Facebook:</label>
+            <input type="text" id="idInput" placeholder="Nhập vào ID Facebook...">
+        </div>
+        <div class="form-group">
+            <button id="checkKeyButton">Kiểm Tra Key</button>
+        </div>
+        <div id="result" class="result"></div>
+        <div id="successMessage" class="success-message">
+            <span class="icon">✔</span>
+            <span class="message">Bạn đã nhập key thành công!</span>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Công ty codere. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script src="dichvu_facebook.js"></script>
+</body>
+</html>

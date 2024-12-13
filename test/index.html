@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="./index.html" class="logo">Logo</a>
+                <ul class="nav-links">
+                <li><a href="./index.html">Trang chủ</a></li>
+            </ul>
+                <ul class="nav-links">
+                    <li><a href="#">Trang chủ</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <button id="toggleChat" class="toggle-btn">Live Chat</button>
+    <div id="liveChat" class="live-chat">
+        <div class="live-chat-header">
+            <span>Live Chat với Admin</span>
+            <button id="closeChat" class="close-btn">×</button>
+        </div>
+        <div id="messages" class="live-chat-body">
+            <!-- Tin nhắn sẽ xuất hiện ở đây -->
+        </div>
+        <div id="typingIndicator" class="typing-indicator">
+            <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            Admin đang soạn tin nhắn...
+        </div>
+        <div class="live-chat-footer">
+            <input type="text" id="messageInput" placeholder="Nhập tin nhắn...">
+            <button id="sendMessage" class="chat-btn">Gửi</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Công ty của bạn. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

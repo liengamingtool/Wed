@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styles_index.css">
+    <title>Dịch Vụ</title>
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div id="notification" class="notification">
+        <div class="notification-content">
+            <h2>Cách Sử Dụng</h2>
+            <video width="100%" controls>
+                <source src="./video/video.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ thẻ video.
+            </video>
+            <div class="notification-buttons">
+                <button id="closeButton" class="button red-button">Thoát</button>
+                <button id="detailsButton" class="button green-button">Coi Chi Tiết</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="video.js"></script>
+    <script src="index.js"></script>
+    <header>
+        <div class="container1">
+            <h1>Cửa Hàng Bán Key Tốt Nhất</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+</br>
+
+    <div class="container">
+        <div class="stats-box">
+            <h2>Thống Kê</h2>
+            <div class="stats-details">
+                <div class="stats-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                        <path d="M12 12c2.67 0 8 1.34 8 4v2h-16v-2c0-2.66 5.33-4 8-4zm0-2c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm0 14c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+                    </svg>
+                    <span id="online-users">0</span>
+                    <p>Người Online</p>
+                </div>
+                <div class="stats-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+                        <path d="M16.5 2C14.57 2 13 3.57 13 5.5S14.57 9 16.5 9 20 7.43 20 5.5 18.43 2 16.5 2zm-9 0C5.57 2 4 3.57 4 5.5S5.57 9 7.5 9 11 7.43 11 5.5 9.43 2 7.5 2zm0 9C4.42 11 0 12.17 0 14.5V18h15v-3.5C15 12.17 10.58 11 7.5 11zm9 0c-.29 0-.62.02-.97.05.61.77.97 1.72.97 2.75V18H24v-3.5C24 12.17 19.58 11 16.5 11z"/>
+                    </svg>
+                    <span id="total-users">10000</span>
+                    <p>Người Truy Cập</p>
+                </div>
+            </div>
+        </div>
+        
+        <h1>DỊCH VỤ</h1>
+        <p>Chọn các dịch vụ dưới đây để tiến hành sử dụng.</p>
+
+        <div class="services">
+            <div class="service">
+                <div class="service-icon">
+                    <img src="./image/Facebook.png" alt="Facebook">
+                </div>
+                <div class="service-content">
+                    <h2>FACEBOOK</h2>
+                    <p>Dịch vụ hack tài khoản Facebook, dò mật khẩu, mở khoá tài khoản, khoá tài khoản của người khác.</p>
+                    <form action="./facebook.html">
+                    <button class="use-now">SỬ DỤNG NGAY</button>
+                    </form>
+                </div>
+                <div class="badge hot">HOT</div>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">
+                    <img src="./image/Zalo.png" alt="Zalo">
+                </div>
+                <div class="service-content">
+                    <h2>ZALO</h2>
+                    <p>Dịch vụ hack tài khoản Zalo, dò mật khẩu, mở khoá tài khoản, khoá tài khoản của người khác.</p>
+                    <form action="./zalo.html">
+                    <button class="use-now">SỬ DỤNG NGAY</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+<br>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="./image/Lightning.png" alt="Xử Lý Nhanh Chóng">
+                </div>
+                <div class="feature-content">
+                    <h2>XỬ LÝ NHANH CHÓNG</h2>
+                    <p>Hệ thống xử lý và phản hồi nhanh chóng, máy chủ ổn định giúp khách hàng trải nghiệm dịch vụ hài lòng nhất có thể.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="./image/Friendly.png" alt="Thiết Kế Thân Thiện">
+                </div>
+                <div class="feature-content">
+                    <h2>THIẾT KẾ THÂN THIỆN</h2>
+                    <p>Giao diện đơn giản, không dẫn dắt người dùng vòng vo, thao tác dễ dàng chỉ với một chạm.</p>
+                    <div class="badge new">NEW</div>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="./image/Youtube.png" alt="Video Hướng Dẫn Đầy Đủ">
+                </div>
+                <div class="feature-content">
+                    <h2>VIDEO HƯỚNG DẪN ĐẦY ĐỦ</h2>
+                    <p>Giúp khách hàng có thể sử dụng dịch vụ dễ dàng ngay sau khi xem xong video.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-icon">
+                    <img src="./image/Customer_care.png" alt="Hỗ Trợ Livechat 24/7">
+                </div>
+                <div class="feature-content">
+                    <h2>HỖ TRỢ LIVECHAT 24/7</h2>
+                    <p>Với đội ngũ hỗ trợ nhiệt tình, có nhiều năm kinh nghiệm trong ngành, quý khách hàng sẽ được hỗ trợ trong thời gian nhanh nhất.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trang chủ. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

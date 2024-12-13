@@ -1,0 +1,355 @@
+/* styles.css */
+
+/* Tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+main {
+    overflow: hidden; /* Ngăn chặn cuộn ngang */
+}
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* Navbar */
+/* styles.css */
+
+/* ... Các phần khác của CSS ... */
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .navbar-nav li {
+        margin: 0;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+
+    .navbar-nav a {
+        color: white;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+}
+
+/* Alert */
+.alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.alert.hidden {
+    display: none;
+}
+
+.alert i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.alert p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #e2e2e2;
+}
+
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Main */
+main {
+    padding: 20px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    color: #155724;
+}
+
+.result.hidden {
+    display: none;
+}
+
+/* Balance */
+.balance {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    color: white;
+}
+
+/* History */
+.history {
+    margin-top: 30px;
+    padding-bottom: 40px; /* Khoảng trống cho lịch sử nạp thẻ */
+}
+
+.history h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+#historyTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#historyTable th, #historyTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+#historyTable th {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+}
+
+#historyTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#historyTable tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Để footer luôn ở cuối trang */
+    width: 100%;
+}
+/* styles.css */
+
+/* ... Các phần khác của CSS ... */
+
+/* Thông báo thành công */
+.alert {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+.alert.hidden {
+    display: none;
+}
+
+.alert i {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+.alert p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #e2e2e2;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Áp dụng hiệu ứng nhấp nháy cho tiêu đề và chữ quan trọng */
+.blinking {
+    animation: blink 1s infinite;
+}
+
+/* Chế độ tối (Dark Mode) */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Cải thiện màu sắc cho dark mode */
+body.dark-mode .navbar {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .balance {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .history {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode table {
+    border-color: #444;
+}
+
+body.dark-mode th {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode th, body.dark-mode td {
+    color: #e0e0e0;
+}

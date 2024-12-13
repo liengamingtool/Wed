@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styles_FACEBOOK.css">
+    <link rel="icon" href="./image/icon.png" type="hình ảnh/loại biểu tượng">
+    <title>Dịch Vụ FACEBOOK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <script src="index.js"></script>
+    <header>
+        <div class="container1">
+            <h1>Cửa Hàng Bán Key Tốt Nhất</h1>
+            <nav class="navbar">
+                <div class="logo">CODERE</div>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Trang chủ</a></li>
+                    <li><a href="./gioi_thieu.html">Giới thiệu</a></li>
+                    <li class="dropdown">
+                        <a href="./dichvu_main.html">Dịch vụ </a>
+                        <i class="fas fa-chevron-down"></i>
+                        <ul class="dropdown-menu">
+                            <li><a href="./facebook.html">Facebook</a></li>
+                            <li><a href="./zalo.html">Zalo</a></li>
+                            <li><a href="./napthe.html">Nạp thẻ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./gia_key.html">Mua key</a></li>
+                    <li><a href="./contact.html">Liên hệ</a></li>
+                </ul>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <a href="./thong_bao.html"><i class="fas fa-bell"></i></a>
+                    <a href="./user.html"><i class="fas fa-user"></i></a>
+                </div>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+                const dropdown = document.querySelector('.dropdown');
+                
+                menuToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+        
+                dropdown.addEventListener('click', () => {
+                    dropdown.classList.toggle('open');
+                });
+            </script>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>DỊCH VỤ FACEBOOK</h1>
+        <div class="warning">
+            <p><strong>CẢNH BÁO:</strong> CHÚNG TÔI SẼ KHÔNG CHỊU BẤT KỲ TRÁCH NHIỆM NÀO QUÝ KHÁCH SỬ DỤNG DỊCH VỤ VỚI MỤC ĐÍCH TRÁI PHÁP LUẬT.</p>
+        </div>
+        <div class="alert-container">
+            <div class="guide-box">
+                <div class="guide-header" onclick="toggleDetails()">
+                    <button class="toggle-btn" id="toggleBtn">+</button>
+                    <span id="guideText"><strong>Nhấn vào đây để xem hướng dẫn mua key</strong></span>
+                </div>
+                <div class="guide-content" id="guideContent">
+                    <p><strong>#Bước 1:</strong> Lựa chọn Loại KEY cần mua và nhập đầy đủ thông tin thẻ cào như: seri, mã thẻ, loại thẻ, mệnh giá và xác minh Captcha. Sau đó ấn vào nút MUA NGAY.</p>
+                    <p><strong>#Lưu ý:</strong> Mã KEY phải khớp với Mệnh giá. (Ví dụ: Bạn chọn KEY VIP phải chọn dùng thẻ cào có MỆNH GIÁ 100.000 để mua)</p>
+                    <p><strong>#Bước 2:</strong> Chờ 2 phút để hệ thống gửi thẻ lên API, sau khi thành công gửi thẻ. Để xem mã KEY vừa mua hãy vào:</p>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="steps">
+                <ol>
+                    <li>
+                        <span>1</span>
+                        <div>
+                            <h2>CHỌN CHỨC NĂNG</h2>
+                            <p>Các công cụ FACEBOOK</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <div>
+                            <h2>NHẬP THÔNG TIN VÀ MÃ KEY</h2>
+                            <p>Các thông tin cần thiết</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <div>
+                            <h2>KHỞI ĐỘNG DỊCH VỤ</h2>
+                            <p>Tiến hành sử dụng dịch vụ</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="key-check">
+                <h1>Kiểm Tra Mã Key Có Chạy Được Không</h1>
+                <form id="keyForm">
+                    <input type="text" id="keyInput" placeholder="Nhập mã key của bạn...." required>
+                    <button type="submit">Kiểm Tra</button>
+                </form>
+                <div id="result" class="result"></div>
+            </div>
+            
+        </div>
+        <script src="scripts.js"></script>
+        </div>
+            <div class="function-selection">
+                <h2>Vui lòng chọn chức năng ở bên dưới</h2>
+                <div class="functions">
+                    <label>
+                        <input type="radio" name="function" value="1">
+                        <div class="function-card">
+                            <img src="./image/password.png" alt="Dò mật khẩu">
+                            <p>Dò mật khẩu</p>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="function" value="2">
+                        <div class="function-card">
+                            <img src="./image/unlock.png" alt="Mở khoá tài khoản">
+                            <p>Mở khoá tài khoản</p>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="function" value="3">
+                        <div class="function-card">
+                            <img src="./image/security_web.png" alt="Khoá tài khoản">
+                            <p>Khoá tài khoản</p>
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="function" value="4">
+                        <div class="function-card">
+                            <img src="./image/seen.png" alt="Đọc trộm tin nhắn">
+                            <p>Đọc trộm tin nhắn</p>
+                        </div>
+                    </label>
+                </div>
+                <button class="btn btn-primary" onclick="redirectToPage()">Tiếp theo</button>
+
+                <script>
+                    function redirectToPage() {
+                        window.location.href = 'dichvu_facebook.html'; // Thay đổi đường dẫn đến file bạn muốn chuyển hướng
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trang Facebook. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script language="javascript">
+        var button = document.getElementById("btn");
+        button.onclick = function(){
+            alert("Vui lòng mua key");
+        }
+    </script>
+        <script>
+            function toggleMenu() {
+                const menu = document.querySelector('.menu');
+                menu.classList.toggle('show');
+            }
+        </script>
+</body>
+</html>
